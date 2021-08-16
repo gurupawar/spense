@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+.btn {
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 4px;
+  background: #000;
+  font-weight: 300;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 768px) {
+  header menu,
+  header .button__group {
+    display: none;
+  }
+  header .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero .hero__right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .hero .hero__right img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .hero .hero__right img {
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background: var(--bg);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.notification {
+  font-size: 14px;
+  padding: 8px 1rem;
+  color: rgba(255, 255, 255, 0.856);
+  background: #000;
+  text-align: center;
+  line-height: 20px;
+}
+
+.notification span {
+  text-decoration: underline;
+}
+
+main {
+  background: #f0eeeb;
+}
+
+header,
+menu,
+.line,
+.hero,
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+}
+
+header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+header .logo {
+  font-weight: 600;
+}
+
+header a + a {
+  margin-left: 1rem;
+}
+
+.hero {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.hero .hero__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.hero .hero__left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.hero .hero__left p {
+  margin: 1rem 0;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.671);
+}
+
+.hero .hero__left .line {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.hero .hero__left .line img {
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+}
+
+.hero .hero__left .line + .line {
+  margin-top: 10px;
+}
+
+.hero .hero__left .subscribe {
+  margin: 1.5rem 0;
+}
+
+.hero .hero__left .subscribe input {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  padding: 0 10px;
+  margin-right: 14px;
+  max-width: 180px;
+}
+
+.hero .hero__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/*# sourceMappingURL=style.css.map */
