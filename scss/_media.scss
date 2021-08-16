@@ -1,4 +1,9 @@
 // Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .mobile__screen {
+    display: none;
+  }
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -21,6 +26,12 @@
   .container {
     max-width: 720px;
   }
+  :root {
+    --text-multiplier: 1.5;
+  }
+  h1 {
+    line-height: 50px;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -36,10 +47,22 @@
       margin-bottom: 2rem;
     }
   }
+  .medium__screen {
+    display: none;
+  }
+  .security__wrapper {
+    flex-direction: column;
+  }
+  .editor__wrapper {
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
+  }
+  :root {
+    --text-multiplier: 1.4;
   }
   .hero {
     .hero__right {
@@ -54,5 +77,8 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  :root {
+    --text-multiplier: 1.6;
   }
 }

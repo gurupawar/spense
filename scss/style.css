@@ -1,79 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
-.btn {
-  color: #fff;
-  padding: 14px 15px;
-  border-radius: 4px;
-  background: #000;
-  font-weight: 300;
-}
-
-button {
-  background-color: transparent;
-  border: 0;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (max-width: 768px) {
-  header menu,
-  header .button__group {
-    display: none;
-  }
-  header .hamburger {
-    display: block;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .hero .hero__right {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 2rem;
-  }
-  .hero .hero__right img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-  .hero .hero__right img {
-    max-height: 500px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 html,
 body {
   height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  background: var(--bg);
+  background: #fff;
   font-weight: 400;
 }
 
@@ -158,6 +89,10 @@ th:not([align]) {
   text-align: left;
 }
 
+:root {
+  --text-multiplier: 1;
+}
+
 .container {
   padding-right: 1rem;
   padding-left: 1rem;
@@ -175,7 +110,17 @@ th:not([align]) {
 }
 
 .notification span {
-  text-decoration: underline;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: calc(2em * var(--text-multiplier));
+  font-weight: 700;
+}
+
+h2 {
+  font-size: calc(1.5em * var(--text-multiplier));
+  font-weight: 700;
 }
 
 main {
@@ -186,7 +131,11 @@ header,
 menu,
 .line,
 .hero,
-.subscribe {
+.subscribe,
+.security__wrapper,
+.security_left,
+.editor__wrapper,
+.editor_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,23 +184,19 @@ header a + a {
           flex: 1;
 }
 
-.hero .hero__left h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 50px;
-}
-
 .hero .hero__left p {
   margin: 1rem 0;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.671);
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.61);
 }
 
 .hero .hero__left .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 500;
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.781);
 }
 
 .hero .hero__left .line img {
@@ -286,5 +231,192 @@ header a + a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.brandLogo {
+  padding: 2rem 0;
+}
+
+.brandLogo .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brandLogo .wrapper img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.security {
+  padding: 1rem 0;
+}
+
+.security .security__wrapper {
+  background: #f0eeeb;
+  border-radius: 10px;
+}
+
+.security .security__wrapper .security_left {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0 0 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.security .security__wrapper .security_right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.editor {
+  margin: 2rem 0;
+}
+
+.editor .editor__wrapper .editor_left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.editor .editor__wrapper .editor_right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 4px;
+  background: #000;
+  font-weight: 300;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+.underlinedText {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.paragraph {
+  margin: 1rem 0;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+@media (max-width: 576px) {
+  .mobile__screen {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 768px) {
+  header menu,
+  header .button__group {
+    display: none;
+  }
+  header .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  :root {
+    --text-multiplier: 1.5;
+  }
+  h1 {
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero .hero__right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .hero .hero__right img {
+    height: auto;
+    width: 100%;
+  }
+  .medium__screen {
+    display: none;
+  }
+  .security__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .editor__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  :root {
+    --text-multiplier: 1.4;
+  }
+  .hero .hero__right img {
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  :root {
+    --text-multiplier: 1.6;
+  }
 }
 /*# sourceMappingURL=style.css.map */

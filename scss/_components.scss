@@ -10,3 +10,14 @@ button {
   background-color: transparent;
   border: 0;
 }
+
+.underlinedText {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.paragraph {
+  margin: 1rem 0;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.61);
+}
