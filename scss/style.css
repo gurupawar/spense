@@ -307,6 +307,37 @@ header a + a {
   margin-bottom: 2rem;
 }
 
+footer {
+  background: #000;
+  padding: 2rem 0;
+}
+
+footer .footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #fff;
+}
+
+footer .footer__wrapper h5 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+footer .footer__wrapper ul li a,
+footer .footer__wrapper p {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.61);
+}
+
+footer .footer__wrapper .spense p {
+  max-width: 250px;
+}
+
 .btn {
   color: #fff;
   padding: 14px 15px;
@@ -397,6 +428,9 @@ button {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .footer__wrapper {
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -408,6 +442,9 @@ button {
   }
   .hero .hero__right img {
     max-height: 500px;
+  }
+  .footer__wrapper {
+    gap: 3rem;
   }
 }
 

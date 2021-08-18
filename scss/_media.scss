@@ -56,6 +56,9 @@
   .editor__wrapper {
     flex-direction: column-reverse;
   }
+  .footer__wrapper {
+    gap: 1rem;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -70,6 +73,9 @@
         max-height: 500px;
       }
     }
+  }
+  .footer__wrapper {
+    gap: 3rem;
   }
 }
 

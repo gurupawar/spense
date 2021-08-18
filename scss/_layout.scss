@@ -149,3 +149,29 @@ header {
     }
   }
 }
+
+footer {
+  background: #000;
+  padding: 2rem 0;
+  .footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    h5 {
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    ul li a,
+    p {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 23px;
+      color: rgba(255, 255, 255, 0.61);
+    }
+    .spense {
+      p {
+        max-width: 250px;
+      }
+    }
+  }
+}
