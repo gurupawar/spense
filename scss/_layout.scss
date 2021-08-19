@@ -34,8 +34,8 @@ main {
   background: #f0eeeb;
 }
 
+// ---------------------- Flex
 header,
-menu,
 .line,
 .hero,
 .subscribe,
@@ -48,6 +48,7 @@ menu,
 .hamburger {
   display: none;
 }
+// ---------------------- Header
 header {
   justify-content: space-between;
   align-items: center;
@@ -55,11 +56,12 @@ header {
   .logo {
     font-weight: 600;
   }
+
   a + a {
     margin-left: 1rem;
   }
 }
-
+// ---------------------- Hero
 .hero {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -104,7 +106,7 @@ header {
     flex: 1;
   }
 }
-
+// ---------------------- Brand LOGO
 .brandLogo {
   padding: 2rem 0;
   .wrapper {
@@ -118,6 +120,7 @@ header {
   }
 }
 
+// ---------------------- Security
 .security {
   padding: 1rem 0;
   .security__wrapper {
@@ -126,15 +129,16 @@ header {
     .security_left {
       flex-direction: column;
       justify-content: center;
-      padding: 3rem 0 0 3rem;
       flex: 1;
     }
     .security_right {
       flex: 1;
+      display: flex;
     }
   }
 }
 
+// ---------------------- Editor
 .editor {
   margin: 2rem 0;
   .editor__wrapper {
@@ -150,6 +154,7 @@ header {
   }
 }
 
+// ---------------------- Footer
 footer {
   background: #000;
   padding: 2rem 0;

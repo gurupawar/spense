@@ -128,7 +128,6 @@ main {
 }
 
 header,
-menu,
 .line,
 .hero,
 .subscribe,
@@ -271,7 +270,6 @@ header a + a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 3rem 0 0 3rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -281,6 +279,9 @@ header a + a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .editor {
@@ -366,25 +367,63 @@ button {
   .mobile__screen {
     display: none;
   }
+  .security .security_left {
+    padding: 2rem 0 0 2rem;
+  }
 }
 
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
+  .security .security_left {
+    padding: 3rem 0 0 3rem;
+  }
 }
 
 @media (max-width: 768px) {
-  header menu,
   header .button__group {
     display: none;
   }
   header .hamburger {
     display: block;
   }
+  .security {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  menu {
+    position: fixed;
+    left: -100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 8rem;
+    background: #f0eeeb;
+    padding: 2rem 0;
+    border-radius: 5px;
+    width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  menu li + li {
+    margin-top: 1.2rem;
+  }
+  .active {
+    left: 50%;
+  }
 }
 
 @media (min-width: 768px) {
+  menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  menu ul li + li {
+    margin-left: 1rem;
+  }
   .container {
     max-width: 720px;
   }
@@ -422,6 +461,12 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .security__wrapper .security_right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0;
+  }
   .editor__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -434,6 +479,12 @@ button {
 }
 
 @media (min-width: 992px) {
+  .security_right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 1rem;
+  }
   .container {
     max-width: 960px;
   }

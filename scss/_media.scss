@@ -3,17 +3,27 @@
   .mobile__screen {
     display: none;
   }
+  .security {
+    .security_left {
+      padding: 2rem 0 0 2rem;
+    }
+  }
 }
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+  .security {
+    .security_left {
+      padding: 3rem 0 0 3rem;
+    }
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) {
   header {
-    menu,
+    // menu,
     .button__group {
       display: none;
     }
@@ -21,8 +31,38 @@
       display: block;
     }
   }
+  .security {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  menu {
+    position: fixed;
+    left: -100%;
+    transform: translateX(-50%);
+    top: 8rem;
+    background: #f0eeeb;
+    padding: 2rem 0;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    li + li {
+      margin-top: 1.2rem;
+    }
+  }
+  .active {
+    left: 50%;
+  }
 }
 @media (min-width: 768px) {
+  menu {
+    ul {
+      display: flex;
+      li + li {
+        margin-left: 1rem;
+      }
+    }
+  }
   .container {
     max-width: 720px;
   }
@@ -52,6 +92,10 @@
   }
   .security__wrapper {
     flex-direction: column;
+    .security_right {
+      justify-content: center;
+      padding-right: 0;
+    }
   }
   .editor__wrapper {
     flex-direction: column-reverse;
@@ -61,6 +105,10 @@
   }
 }
 @media (min-width: 992px) {
+  .security_right {
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
   .container {
     max-width: 960px;
   }
