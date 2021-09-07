@@ -8,6 +8,14 @@
       padding: 2rem 0 0 2rem;
     }
   }
+
+  .hero {
+    .hero__right {
+      img {
+        max-height: 500px;
+      }
+    }
+  }
 }
 @media (min-width: 576px) {
   .container {
@@ -100,8 +108,9 @@
   .editor__wrapper {
     flex-direction: column-reverse;
   }
-  .footer__wrapper {
-    gap: 1rem;
+
+  .footer__wrapper > div {
+    margin-bottom: 2rem;
   }
 }
 @media (min-width: 992px) {
@@ -122,9 +131,8 @@
       }
     }
   }
-  .footer__wrapper {
-    gap: 3rem;
-  }
+  // .footer__wrapper > div {
+  // }
 }
 
 // Extra large devices (large desktops, 1200px and up)
